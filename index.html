@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seven Elements% — Minecraft Speedrun</title>
+<meta name="description" content="Submit your Minecraft Java Seven Elements% speedrun and compete on the leaderboard." />
+<style>
+:root{--bg:#0b0f0d;--panel:#121916;--panel2:#18221d;--line:#29372f;--text:#edf5ef;--muted:#9bad9f;--green:#65e69a;--green2:#2fbb6a;--gold:#ffd166;--red:#ff7777}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1b3928 0,transparent 50%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--green)}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+header{border-bottom:1px solid #223027;background:#0b100ddd;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.04em}.logo{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,#72f3a5,#187341);color:#06150c;font-size:20px;box-shadow:0 0 28px #48d98022}
+nav{display:flex;gap:20px;align-items:center}nav a{text-decoration:none;color:var(--muted);font-weight:650}nav a:hover{color:var(--text)}
+.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--green);color:#062010;font-weight:850}.btn:hover{background:#8df7b3}.btn.secondary{background:#202d25;color:var(--text);border:1px solid var(--line)}.btn.small{padding:8px 12px;font-size:13px}
+.hero{padding:58px 0 30px;display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:center}
+.eyebrow{color:var(--green);font-weight:850;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-.045em;margin:13px 0 18px}h1 span{color:var(--green)}.lead{color:#b3c2b7;font-size:17px;max-width:630px}
+.hero-card,.panel{background:linear-gradient(145deg,#17231b,#101612);border:1px solid var(--line);border-radius:18px;padding:22px}
+.hero-card h3{margin:0 0 8px}.bigtime{font-size:34px;font-weight:900;letter-spacing:-.04em;color:var(--green)}.mini{font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 28px}.stat{padding:17px;background:#101713;border:1px solid var(--line);border-radius:14px}.stat strong{display:block;font-size:25px}.stat span{font-size:12px;color:var(--muted)}
+.elements{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin:20px 0 38px}.element{background:var(--panel);border:1px solid var(--line);border-radius:12px;text-align:center;padding:14px 6px}.element .emoji{font-size:25px;display:block;margin-bottom:7px}.element strong{font-size:12px;display:block}.element small{color:var(--muted);font-size:10px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:36px 0 16px}.section-head h2{margin:0;font-size:26px;letter-spacing:-.03em}.section-head p{margin:4px 0 0;color:var(--muted)}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.field label{font-size:12px;font-weight:800;color:#c8d7cc}.field input,.field select,.field textarea,.toolbar input,.toolbar select{width:100%;background:#0c120e;border:1px solid #314238;color:var(--text);border-radius:9px;padding:11px 12px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.field textarea{min-height:86px;resize:vertical}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.full{grid-column:1/-1}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid #243128}th{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);background:#151e18}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#19251d}.rank{font-weight:900;color:var(--muted)}.rank.first{color:var(--gold)}.runner{font-weight:800}.time{font-variant-numeric:tabular-nums;font-weight:900;color:var(--green)}.status{font-size:11px;border-radius:20px;padding:4px 8px;background:#302d1d;color:var(--gold);white-space:nowrap}.status.verified{background:#153b26;color:var(--green)}.proof{font-weight:750;text-decoration:none}.empty{text-align:center;padding:28px;color:var(--muted)}
+.columns{display:grid;grid-template-columns:1fr .85fr;gap:20px;align-items:start}.rules{padding-left:20px;color:#c1d0c5}.rules li{margin:10px 0}.notice{background:#1f2117;border:1px solid #4b4524;color:#e5d89a;padding:12px 14px;border-radius:10px;font-size:13px;margin:14px 0}.success{background:#102c1b;border:1px solid #286540;color:#a9f5c1;padding:12px 14px;border-radius:10px;margin:12px 0;display:none}.error{background:#321919;border:1px solid #693232;color:#ffc2c2;padding:12px 14px;border-radius:10px;margin:12px 0;display:none}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:800px){.hero,.columns{grid-template-columns:1fr}.elements{grid-template-columns:repeat(4,1fr)}nav{gap:10px}nav a:not(.submit-link){display:none}.hero{padding-top:38px}}
+@media(max-width:500px){.wrap{padding:0 14px}.nav{height:62px}.brand{font-size:13px}.logo{width:34px;height:34px}.hero-card{padding:17px}.stats{gap:7px}.stat{padding:12px}.stat strong{font-size:21px}.elements{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand"><div class="logo">7</div><div>SEVEN ELEMENTS<span style="color:var(--green)">%</span></div></div>
+  <nav><a href="#leaderboard">Leaderboard</a><a href="#rules">Rules</a><a class="submit-link" href="#submit">Submit Run</a><button class="btn small" onclick="document.querySelector('#submit').scrollIntoView({behavior:'smooth'})">Submit a run ↗</button></nav>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="eyebrow">Minecraft Java · Random Seed · Vanilla</div>
+      <h1>MASTER ALL SEVEN.<br><span>BEAT THE CLOCK.</span></h1>
+      <p class="lead">Kumpulkan tujuh elemen. Buktikan run-mu. Rebut posisi teratas di leaderboard Seven Elements%.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><button class="btn" onclick="document.querySelector('#submit').scrollIntoView({behavior:'smooth'})">Submit your run</button><button class="btn secondary" onclick="document.querySelector('#rules').scrollIntoView({behavior:'smooth'})">Read rules</button></div>
+    </div>
+    <div class="hero-card"><div class="eyebrow">Current challenge</div><h3>Seven Elements%</h3><p class="mini">Collect all seven required items in one Survival run.</p><div class="bigtime" id="bestTime">—:—:—</div><div class="mini" id="bestLabel">Belum ada rekor yang tercatat</div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><div style="display:flex;justify-content:space-between"><span class="mini">WORLD RECORD</span><strong id="wrRunner">Belum ada</strong></div></div>
+  </section>
+  <div class="stats"><div class="stat"><strong id="runCount">0</strong><span>SUBMITTED RUNS</span></div><div class="stat"><strong id="runnerCount">0</strong><span>RUNNERS</span></div><div class="stat"><strong>7</strong><span>ELEMENTS TO COLLECT</span></div></div>
+  <div class="eyebrow">The seven required items</div>
+  <section class="elements">
+    <div class="element"><span class="emoji">🟫</span><strong>TANAH</strong><small>Dirt</small></div>
+    <div class="element"><span class="emoji">⚡</span><strong>PETIR</strong><small>Lightning Rod</small></div>
+    <div class="element"><span class="emoji">🪣</span><strong>AIR</strong><small>Water Bucket</small></div>
+    <div class="element"><span class="emoji">🍃</span><strong>DAUN</strong><small>Oak Leaves</small></div>
+    <div class="element"><span class="emoji">✨</span><strong>CAHAYA</strong><small>Glowstone</small></div>
+    <div class="element"><span class="emoji">🔥</span><strong>API</strong><small>Fire Charge</small></div>
+    <div class="element"><span class="emoji">🌪️</span><strong>ANGIN</strong><small>Wind Charge</small></div>
+  </section>
+
+  <section id="leaderboard">
+    <div class="section-head"><div><h2>Leaderboard</h2><p>Waktu tercepat berada di urutan teratas.</p></div><div class="toolbar"><input id="search" placeholder="Cari runner..." style="width:180px" oninput="renderRuns()"><select id="filterStatus" onchange="renderRuns()" style="width:145px"><option value="all">Semua status</option><option value="verified">Verified</option><option value="pending">Pending review</option></select></div></div>
+    <div class="notice" id="modeNotice">Mode demo aktif: submission disimpan hanya di browser/perangkat ini. Hubungkan Supabase untuk leaderboard publik lintas perangkat.</div>
+    <div class="table-wrap"><table><thead><tr><th>#</th><th>Runner</th><th>Time</th><th>Version</th><th>Proof</th><th>Status</th></tr></thead><tbody id="leaderRows"></tbody></table><div id="empty" class="empty">Belum ada run. Jadilah runner pertama yang submit!</div></div>
+  </section>
+
+  <section class="columns" style="margin-top:42px">
+    <div class="panel" id="submit"><div class="eyebrow">Put your time on the board</div><h2 style="margin:8px 0 6px">Submit a run</h2><p class="mini" style="margin-top:0">Isi data run dan sertakan video bukti yang bisa ditonton moderator.</p>
+      <div id="success" class="success"></div><div id="error" class="error"></div>
+      <form id="submitForm">
+        <div class="formgrid">
+          <div class="field"><label for="runner">Runner name *</label><input id="runner" maxlength="30" required placeholder="Nama / username"></div>
+          <div class="field"><label for="time">Run time (HH:MM:SS) *</label><input id="time" required pattern="^\\d{1,3}:[0-5]\\d:[0-5]\\d$" placeholder="00:24:38"></div>
+          <div class="field"><label for="version">Minecraft version *</label><select id="version" required><option value="">Pilih versi</option><option>Java 1.21.11</option><option>Java 1.21.10</option><option>Java 1.21.8</option><option>Java 1.21.5</option><option>Java 1.21.4</option><option>Other (write in notes)</option></select></div>
+          <div class="field"><label for="seed">Seed (optional)</label><input id="seed" maxlength="80" placeholder="Random seed value"></div>
+          <div class="field full"><label for="proof">Video proof URL *</label><input id="proof" type="url" required placeholder="https://youtube.com/..."></div>
+          <div class="field full"><label for="notes">Notes (optional)</label><textarea id="notes" maxlength="500" placeholder="Catatan run, kategori, atau informasi tambahan"></textarea></div>
+        </div>
+        <label style="display:flex;gap:9px;align-items:flex-start;color:#bdcbbf;font-size:12px;margin:4px 0 17px"><input id="confirm" type="checkbox" required style="margin-top:3px"> Saya memastikan run ini sesuai ruleset, direkam tanpa potongan, dan bukan hasil cheat atau duplikasi.</label>
+        <button class="btn" type="submit" style="width:100%">Submit run for review →</button>
+      </form>
+    </div>
+    <aside class="panel" id="rules"><div class="eyebrow">Ruleset v1.0 draft</div><h2 style="margin:8px 0">Run rules</h2>
+      <ol class="rules"><li><b>Game:</b> Minecraft Java Edition, singleplayer Survival, Random Seed.</li><li><b>Vanilla:</b> no gameplay mods, cheats, commands, or item duplication.</li><li><b>Start:</b> world has loaded and the runner can begin moving.</li><li><b>Finish:</b> all seven required items are in the player's inventory at the same time.</li><li><b>Timer:</b> continues through death, inventory screens, and dimension travel.</li><li><b>Proof:</b> one continuous video from world creation to finish, with timer or verifiable timestamps.</li><li><b>Review:</b> submissions are pending until a moderator checks the video.</li></ol>
+      <div class="notice">Rekomendasi: tetapkan satu versi Minecraft untuk leaderboard utama. Versi berbeda bisa dipisah agar perbandingan waktu tetap adil.</div>
+    </aside>
+  </section>
+</main>
+<footer><div class="wrap foot"><div><b style="color:var(--text)">SEVEN ELEMENTS%</b><br>Community challenge · Unofficial Minecraft speedrun category</div><div>Fan-made community project. Not affiliated with Mojang or Microsoft.</div></div></footer>
+
+<script>
+/*
+  PUBLIC LEADERBOARD SETUP:
+  1. Create a Supabase project.
+  2. Run schema.sql in Supabase SQL Editor.
+  3. Paste the Project URL and anon key below.
+  4. Enable Row Level Security policies from schema.sql.
+  Never put a service_role key in this frontend.
+*/
+const SUPABASE_URL = "";
+const SUPABASE_ANON_KEY = "";
+let supabaseClient = null;
+let runs = [];
+const DEMO_KEY = "seven-elements-runs-v1";
+function parseTime(s){const p=s.trim().split(":").map(Number);if(p.length!==3||p.some(n=>!Number.isFinite(n)))return Infinity;return p[0]*3600+p[1]*60+p[2]}
+function fmtTime(sec){if(!Number.isFinite(sec))return "—:—:—";const h=Math.floor(sec/3600),m=Math.floor(sec%3600/60),s=sec%60;return [h,m,s].map(n=>String(n).padStart(2,"0")).join(":")}
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function localRuns(){try{return JSON.parse(localStorage.getItem(DEMO_KEY)||"[]")}catch{return []}}
+function saveLocal(){localStorage.setItem(DEMO_KEY,JSON.stringify(runs))}
+function updateStats(){document.getElementById("runCount").textContent=runs.length;document.getElementById("runnerCount").textContent=new Set(runs.map(r=>r.runner.toLowerCase())).size;const verified=runs.filter(r=>r.status==="verified").sort((a,b)=>a.seconds-b.seconds);if(verified.length){document.getElementById("bestTime").textContent=fmtTime(verified[0].seconds);document.getElementById("bestLabel").textContent="Verified world record";document.getElementById("wrRunner").textContent=verified[0].runner}else{document.getElementById("bestTime").textContent="—:—:—";document.getElementById("bestLabel").textContent="Belum ada rekor terverifikasi";document.getElementById("wrRunner").textContent="Belum ada"}}
+function renderRuns(){const q=(document.getElementById("search").value||"").toLowerCase();const status=document.getElementById("filterStatus").value;const filtered=runs.filter(r=>r.runner.toLowerCase().includes(q)&&(status==="all"||r.status===status)).sort((a,b)=>a.seconds-b.seconds);const body=document.getElementById("leaderRows");body.innerHTML=filtered.map((r,i)=>`<tr><td class="rank ${i===0?"first":""}">${i===0?"🏆":i+1}</td><td><div class="runner">${escapeHtml(r.runner)}</div><div class="mini">${escapeHtml(r.seed||"Random seed")}</div></td><td class="time">${fmtTime(r.seconds)}</td><td>${escapeHtml(r.version)}</td><td><a class="proof" href="${escapeHtml(r.proof)}" target="_blank" rel="noopener noreferrer">Watch ↗</a></td><td><span class="status ${r.status==="verified"?"verified":""}">${r.status==="verified"?"Verified":"Pending"}</span></td></tr>`).join("");document.getElementById("empty").style.display=filtered.length?"none":"block";updateStats()}
+async function loadRuns(){if(SUPABASE_URL&&SUPABASE_ANON_KEY){try{const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";script.onload=async()=>{supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);document.getElementById("modeNotice").textContent="Public leaderboard connected. New runs are submitted as pending until moderator review.";await fetchRemoteRuns();};script.onerror=()=>{runs=localRuns();renderRuns()};document.head.appendChild(script);return}catch(e){}}runs=localRuns();renderRuns()}
+async function fetchRemoteRuns(){if(!supabaseClient)return;runs=[];const {data,error}=await supabaseClient.from("runs").select("id,runner,seconds,version,seed,proof,notes,status,created_at").order("seconds",{ascending:true});if(error){showMessage("error","Gagal memuat leaderboard publik. Periksa konfigurasi Supabase.");return}runs=(data||[]);renderRuns()}
+function showMessage(type,msg){const el=document.getElementById(type);el.textContent=msg;el.style.display="block";if(type==="success")document.getElementById("error").style.display="none";else document.getElementById("success").style.display="none"}
+document.getElementById("submitForm").addEventListener("submit",async e=>{e.preventDefault();const runner=document.getElementById("runner").value.trim(),time=document.getElementById("time").value.trim(),seconds=parseTime(time),version=document.getElementById("version").value,seed=document.getElementById("seed").value.trim(),proof=document.getElementById("proof").value.trim(),notes=document.getElementById("notes").value.trim();if(!runner||!version||!proof||!Number.isFinite(seconds)||seconds<1){showMessage("error","Periksa kembali nama, versi, link bukti, dan format waktu HH:MM:SS.");return}if(!/^https?:\/\//i.test(proof)){showMessage("error","Link bukti harus berupa URL http atau https.");return}
+const record={runner,seconds,version,seed,proof,notes,status:"pending"};
+if(supabaseClient){const {error}=await supabaseClient.from("runs").insert(record);if(error){showMessage("error","Submit gagal: "+error.message);return}await fetchRemoteRuns()}else{record.id=Date.now()+"-"+Math.random().toString(36).slice(2);record.created_at=new Date().toISOString();runs.push(record);saveLocal();renderRuns()}
+e.target.reset();showMessage("success",supabaseClient?"Run berhasil dikirim! Statusnya Pending sampai moderator memverifikasi.":"Run tersimpan di browser ini sebagai demo lokal. Untuk dilihat semua orang, hubungkan Supabase dan deploy website.");document.querySelector("#leaderboard").scrollIntoView({behavior:"smooth"})});
+loadRuns();
+</script>
+</body></html>
